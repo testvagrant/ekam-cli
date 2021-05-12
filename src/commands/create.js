@@ -16,7 +16,7 @@ class CreateCommand extends Command {
     const { flags } = this.parse(CreateCommand);
     const name = flags.name || shortName;
     const path = flags.path || "./";
-    this.log(`Creating new project ${shortName}`);
+    this.log(`Creating new project ${name}`);
     const dl = new DownloaderHelper(
       "https://github.com/RuthlessImagineers/ekam-assets/raw/main/ekam_template.zip",
       `${path}`
@@ -25,7 +25,7 @@ class CreateCommand extends Command {
       var zip = new AdmZip(`${path}ekam_template.zip`);
       zip.extractAllTo(`${path}${name}`, true);
       fs.unlinkSync(`${path}ekam_template.zip`);
-      this.log(`Created new project ${shortName}`);
+      this.log(`Created new project ${name}`);
     });
     dl.start();
   }
