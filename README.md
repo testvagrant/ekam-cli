@@ -19,7 +19,7 @@ $ npm install -g ekam-cli
 $ ekam COMMAND
 running command...
 $ ekam (-v|--version|version)
-ekam-cli/0.1.0 darwin-x64 node-v10.16.3
+ekam-cli/0.2.0 darwin-x64 node-v10.16.3
 $ ekam --help [COMMAND]
 USAGE
   $ ekam COMMAND
@@ -44,7 +44,7 @@ OPTIONS
   -p, --path=path  path to create project
 ```
 
-_See code: [src/commands/create.js](https://github.com/krishnanandb/ekam-cli/blob/v0.1.0/src/commands/create.js)_
+_See code: [src/commands/create.js](https://github.com/krishnanandb/ekam-cli/blob/v0.2.0/src/commands/create.js)_
 
 ## `ekam help [COMMAND]`
 
