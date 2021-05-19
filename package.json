@@ -1,7 +1,7 @@
 {
   "name": "ekam-cli",
   "description": "One stop framework for functional automation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Sudarshan | Krishnanand",
   "bin": {
     "ekam": "./bin/run"
