@@ -22,7 +22,7 @@ class CreateCommand extends Command {
       `${path}`
     );
     dl.on("end", () => {
-      console.log(`${path}ekam-template.zip`)
+      this.log(`Creating new project ${name}`);
       var zip = new AdmZip(`${path}ekam-template.zip`);
       zip.extractAllTo(`${path}${name}`, true);
       fs.unlinkSync(`${path}ekam-template.zip`);
