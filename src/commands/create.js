@@ -18,13 +18,14 @@ class CreateCommand extends Command {
     const path = flags.path || "./";
     this.log(`Creating new project ${name}`);
     const dl = new DownloaderHelper(
-      "https://github.com/RuthlessImagineers/ekam-assets/raw/main/ekam_template.zip",
+      "https://github.com/RuthlessImagineers/ekam-assets/raw/main/ekam-template.zip",
       `${path}`
     );
     dl.on("end", () => {
-      var zip = new AdmZip(`${path}ekam_template.zip`);
+      console.log(`${path}ekam-template.zip`)
+      var zip = new AdmZip(`${path}ekam-template.zip`);
       zip.extractAllTo(`${path}${name}`, true);
-      fs.unlinkSync(`${path}ekam_template.zip`);
+      fs.unlinkSync(`${path}ekam-template.zip`);
       this.log(`Created new project ${name}`);
     });
     dl.start();
