@@ -18,7 +18,7 @@ class CreateCommand extends Command {
     const path = flags.path || "./";
     this.log(`Creating new project ${name}`);
     const dl = new DownloaderHelper(
-      "https://github.com/RuthlessImagineers/ekam-assets/raw/main/ekam-template.zip",
+      "https://github.com/testvagrant/Ekam-Template/raw/main/ekam-template.zip",
       `${path}`
     );
     dl.on("end", () => {
